@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/all.css">
+
+
+    
+    {% endblock %}
+
+    {% block content %}
+    <section>
+    <h2 class="title">Ejercicio de Aporte</h2>
+        </div>
+
+    <br>
+    <main class="main">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/all.css">
+           
+        <div class="description">
+
+            <div class="container">
+                La demanda semana de leche de las ultimas 50 semanas en la tienda
+                aparece en la siguiente tabla: 
+            </div>    
+        
+            <div class="container">
+                <br>
+                a) Asigne la distribucion de probabilidad  apropiada de la demanda, de manera que la
+                probabilidad de una demanda particular en la simulacion sea igual a la frecuencia
+                relativa de esa demanda en las ultimas 50 semanas
+                <br>
+                <br>
+                b) La tienda ordena 42 cajas de todas las semanas. Cual es la faltante promedio y el
+                sobrante promedio en los inventarios de 20 semaanas?
+            </div> 
+                <br><br><br>
+        </div>
+        <div class="title2">
+            Tabla de datos <br><br>
+        </div>
+        <div class="container">
+            {{data|safe}}
+        </div>
+        <div class="container"> >
+            Sacamos la probabilidad del susceso de cada evento descrito en los datos
+            propuestos. 
+        </div><br>
+        <div class="container">
+            {{data1|safe}}
+        </div>
+        <div class="container"> >
+            Sacamos los intervalos propuestos para la ocacion segun la probabilidad 
+            resultante. 
+        </div><br>
+        <div class="container">
+            {{data2|safe}}
+        </div>
+        <div class="container"> >
+            Aqui tenemos los numeros aleotrios descritos en la prueba
+        </div><br>
+
+        <div class="container">
+            {{data3|safe}}
+        </div>
+        <div class="container"> >
+            Y en conjunto con los numeros aleotrios sacamos la simulacion de los eventos.
+        </div><br>
+        <div class="container">
+            {{data4|safe}}
+        </div>
+        <div class="container"> >
+            En la sigueinte ilustracion podemos observar como sacamos el sobrante y faltante promedio
+            descritos en el literal b de la problematica. 
+        </div><br>
+        <div class="container">
+            {{data5|safe}}
+        </div>
+        <div class="container"> >
+            Y como pudimos observar en la ilustracion anterior el sobrante y faltante promedio corresponden a los siguiente valores:
+        </div><br>
+        <div class="container" style="font-size:50px; margin: 0 auto;">
+            {{data6|safe}} ---------------  {{data7|safe}}
+        </div>
+        </main>
+        <br><br><br>
+    {% endblock %}
+<br><br><br><br>

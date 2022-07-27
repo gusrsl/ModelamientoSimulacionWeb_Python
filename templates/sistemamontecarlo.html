@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/all.css">
+
+
+    
+    {% endblock %}
+
+    {% block content %}
+    <section>
+        <br><br><br>
+    <h2 class="title">Ejercicio de Aporte</h2>
+    
+    <div class="description"></div>
+
+
+    <div class="description">
+        La demanda semana de leche de las ultimas 50 semanas en la tienda
+        aparece en la siguiente tabla: 
+    </div>    
+
+    <div class="description">
+        <br>
+        a) Asigne la distribucion de probabilidad  apropiada de la demanda, de manera que la
+        probabilidad de una demanda particular en la simulacion sea igual a la frecuencia
+        relativa de esa demanda en las ultimas 50 semanas
+        <br>
+        <br>
+        b) La tienda ordena 42 cajas de todas las semanas. Cual es la faltante promedio y el
+        sobrante promedio en los inventarios de 20 semaanas?
+    </div> 
+    <br>
+    <br><br>
+        <div class="container">
+            {{data|safe}}
+        </div>
+
+        <div class="card">
+            <center><img src="data:image/png;base64,{{ image }}"></center>
+        </div>
+        <br><br><br>
+
+        <div class="button" aria-labelledby="navbarDropdown">
+            <a class="button button-success" href="{{url_for('calculomontecarlo')}}">Calcular!</a>
+        </div>
+
+        </div><br><br>
+
+    <div class="producto-img centrar">
+        </div><br><br>
+    </section><br>
+    <br>
+   
+    <br><br><br><br>
+    <main class="main">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/all.css">
+            <section class="section grid">
+                </article>
+                <article class="section__article">
+                    
+                </article>
+
+            </article>
+            <article class="section__article">
+                <a href="">
+                    
+                </a>
+            </article>
+
+        </main>
+        <br><br><br>
+    {% endblock %}
+<br><br><br><br>
