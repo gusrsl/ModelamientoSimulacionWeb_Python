@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Suavización exponencial</title>
+{% endblock %}
+
+{% block content %}
+<legend class="text-center header">Suavización exponencial</legend><br>
+<div class="container">
+    <br><br><br>
+    <div class="card">
+        <form enctype="multipart/form-data" method="POST" action="{{url_for('viewsuavexpo')}}"><br>
+            <div class="col-sm-12">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="exampleFormControlFile1">Subir el archivo en formato ( .xlsx, .csv , .json, .html etc..)</label>
+                        <!-- <a class="btn btn-warning float-right"
+                            href="{{url_for('static', filename='file/template.xlsx')}}" role="button">Descargar
+                            plantilla</a> -->
+                        <input name="file" type="file" class="form-control-file form-data" id="exampleFormControlFile1"
+                            required>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Por favor especificar las columnas de las tablas exactamente como estan escritas...
+                        </small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Columna de tiempo</label>
+                        <input name="tiempo" type="text" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Colunma de datos</label>
+                        <input name="datos" type="text" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Alfa</label>
+                        <input name="alfa" type="text" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Tipo de archivo</label>
+                        <select name="tipoarchivo" required>
+                            <option value="">---</option>
+                            <option value="1">Excel</option> 
+                            <option value="2">csv </option> 
+                            <option value="3">json</option>
+                            <option value="4">html</option> 
+                            <!-- <option value="5">clipboard</option> 
+                            <option value="6">feather</option> 
+                            <option value="7">fwf</option> 
+                            <option value="8">gbq</option> 
+                            <option value="9">parquet</option> 
+                            <option value="10">pickle</option> 
+                            <option value="11">msgpack</option> 
+                            <option value="12">sas</option> 
+                            <option value="13">sql</option> 
+                            <option value="14">sql_query</option> 
+                            <option value="15">sql_table</option>  -->
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">Calcular</button>
+
+            </div>
+        </form><br>
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

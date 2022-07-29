@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Método congruencial Multiplicativo</title>
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <form method="POST" action="{{url_for('viewcongruencialmul')}}"><br>
+        <div class="container">
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault01">Número iteraciones</label>
+                    <input name="numeroIteraciones" type="number" class="form-control" id="validationDefault01"
+                        required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault02">Semilla</label>
+                    <input name="semilla" type="number" class="form-control" id="validationDefault02" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault01">Multiplicador</label>
+                    <input name="multiplicador" type="number" class="form-control" id="validationDefault01"
+                        required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="validationDefault01">Módulo</label>
+                    <input name="modulo" type="number" class="form-control" id="validationDefault01" required>
+                </div>
+            </div>
+            <button class="btn btn-success" type="submit">Calcular</button>
+        </div>
+    </form><br>
+</div>
+{% endblock %}

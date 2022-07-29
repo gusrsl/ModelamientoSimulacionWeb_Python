@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Sistema de inventario</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br><br><br>
+    <legend class="text-center header">Sistema de inventario</legend><br>
+    <div class="card">
+        <form method="POST" action="{{url_for('viewinventario')}}"><br>
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Demanda (D)</label>
+                        <input name="demanda" type="number" step="any" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Costo de ordenar (Co)</label>
+                        <input name="costoOrdenar" type="number" step="any" class="form-control"
+                            id="validationDefault02" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Costo de mantenimiento (Ch)</label>
+                        <input name="costoMantenimiento" type="number" step="any" class="form-control"
+                            id="validationDefault01" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Costo del producto (P)</label>
+                        <input name="costoProducto" type="number" step="any" class="form-control"
+                            id="validationDefault02" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Tiempo de espera (T)</label>
+                        <input name="tiempoEspera" type="number" step="any" class="form-control"
+                            id="validationDefault01" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Dias/Año</label>
+                        <input name="diasAno" type="number" class="form-control" id="validationDefault01" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Número iteraciones (n)</label>
+                        <input name="numeroIteraciones" type="number" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">Calcular</button>
+            </div>
+        </form><br>
+    </div>
+</div><br><br><br><br>
+{% endblock %}

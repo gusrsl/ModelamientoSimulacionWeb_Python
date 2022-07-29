@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Método de los cuadrados medios</title>
+{% endblock %}
+
+{% block content %}
+<legend class="text-center header">Método de los cuadrados medios</legend><br>
+<div class="container">
+   
+    <div class="card">
+        <form method="POST" action="{{url_for('viewcuadradosmedios')}}"><br>
+            <div class="col-sm-12">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Número iteraciones</label>
+                        <input name="numeroIteraciones" type="number" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Semilla</label>
+                        <input name="semilla" type="number" class="form-control" id="validationDefault02" required>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">Calcular</button>
+            </div>
+        </form><br>
+    </div>
+</div><br>
+
+{% endblock %}

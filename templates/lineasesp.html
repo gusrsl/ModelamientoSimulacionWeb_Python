@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Línea de espera</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br><br><br>
+    <legend class="text-center header">Línea de espera</legend><br>
+    <div class="card">
+        <form method="POST" enctype="multipart/form-data" action="{{url_for('viewlineasesp')}}"><br>
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Lambda (λ)</label>
+                        <input name="landa" type="number" step="any" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Miu (µ)</label>
+                        <input name="miu" type="number" step="any" class="form-control" id="validationDefault02"
+                            required>
+                    </div>
+                    <legend class="text-center header">Método congruencial lineal</legend><br>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Número iteraciones (n)</label>
+                        <input name="numeroIteraciones" type="number" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Semilla (X0)</label>
+                        <input name="semilla" type="number" class="form-control" id="validationDefault02" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Multiplicador (a)</label>
+                        <input name="multiplicador" type="number" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Incremento (c)</label>
+                        <input name="incremento" type="number" class="form-control" id="validationDefault02" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Módulo (m)</label>
+                        <input name="modulo" type="number" class="form-control" id="validationDefault01" required>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">Calcular</button>
+            </div>
+        </form><br>
+    </div>
+</div><br><br><br><br>
+{% endblock %}

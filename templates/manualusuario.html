@@ -1,0 +1,205 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Media, Mediana y Moda</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-hero bg-image overlay-dark" style="background-image: url(../static/img/MU.png);">
+    <div class="hero-section">
+        <br><br><br><br><br><br><br>
+      <div class="container text-center wow zoomIn">
+        <span class="subhead" style="color:aliceblue">Requerimiento</span>
+        <h1 class="display-4" style="color:aliceblue">Manual de Usuario</h1>
+        <a href="/" class="btn btn-dark">Home</a>
+        <br><br><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+
+<section>
+    <br><br><br>
+<h2 class="title">Manual de Usuario en Linea</h2>
+<br><br>
+
+    <div class="description">
+        El siguiente manual de usuario va orientado al aplicativo web desarrollado 
+        para la materia de Modelamiento y simulacion. La misma se ha enfocado a los 
+        apartados descritos en el menu de navegacion, los mismos que se proceden a 
+        desarrollar en el paratado correspondente de cada uno.
+    </div>
+    <br><br> <br>
+      <div style="text-align: center;" class="description">
+          A continuacion podremos observar cada apartado descrito en el menu de 
+          navegacion: 
+          <br>
+          <a style="text-align: center; margin-left: 0%;" href="/">Home</a>
+          <br> <br>
+          <div>Dentro del Apartado de Simulaciones:</div><br>
+            <a href="{{url_for('sistemamontecarlo')}}"> > Simulacion Montecarlo</a><br>
+            <a href="{{url_for('inventario')}}"> > Modelo de inventario</a><br>
+            <a href="{{url_for('lineasesp')}}"> > Linea de espera</a><br>
+          <br><br>
+          
+          <div>En el partado de Numeros aleatorios:</div><br>
+            <a href="{{url_for('cuadradosmedios')}}"> > Cuadrados Medios</a><br>
+            <a href="{{url_for('congruenciallineal')}}"> > Congruencia Lineal</a> <br>
+            <a href="{{url_for('congruencialmul')}}"> > Congruencial Multiplicativa</a> <br>
+          
+          <br><br>
+          
+          <div style="text-align: center;" class="description">En el partado de Pronosticos:</div><br>
+            <a class="description" href="{{url_for('cuadradosmedios')}}"> > Promedio Movil</a><br>
+            <a class="description" href="{{url_for('congruenciallineal')}}"> > Suavizacion Exponenecial</a> <br>
+            <a class="description" href="{{url_for('congruencialmul')}}"> > Regrecion Lineal</a> <br>
+              <br><br><br> 
+          </div>
+    <section>
+      <div id="banner-services" data-stellar-background-ratio="0">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="banner-content animated out" data-animation="fadeInUp" data-delay="0">
+                <h3 class="banner-heading">Simulaciones</h3>
+                <div style="text-align: justify;" class="banner-decription">
+                  Procede con una interfaz la cual deja ingresar un documento de ciertos
+                  tipografia la cual esta en las opciones del formulario, y los respectivos
+                  valores los cuales se necesitan para realizar la simulacion pertinente.
+                </div> <!-- end banner-decription -->
+              </div> <!-- end banner-content -->
+            </div> <!-- end col-sm-6 -->
+
+            <div class="col-sm-6">
+              <div class="banner-image animated out" data-animation="fadeInUp" data-delay="0">
+                <img style="height: 100%; width: 100%;" src="/static/img/CapformMontecarlo.png" alt="">
+              </div> <!-- end banner-image -->
+            </div> <!-- end col-sm-6 -->
+            
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+      </div>
+    </section>
+    <br><br>
+
+    <section>
+      <div id="banner-services" data-stellar-background-ratio="0">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="banner-content animated out" data-animation="fadeInUp" data-delay="0">
+                <h3 class="banner-heading">Numeros Aleatorios</h3>
+                <div style="text-align: justify;" class="banner-decription">
+                  Debemos recordar que la teoría de la probabilidad es una herramienta 
+                  de las matemáticas que establece una serie de reglas para calcular 
+                  la posibilidad de ocurrencia de un fenómeno aleatorio o proceso 
+                  estocástico.
+                </div> <!-- end banner-decription -->
+              </div> <!-- end banner-content -->
+            </div> <!-- end col-sm-6 -->
+
+            <div class="col-sm-6">
+              <div class="banner-image animated out" data-animation="fadeInUp" data-delay="0">
+                <img style="height: 100%; width: 100%;" src="/static/img/CapformForm.png" alt="">
+              </div> <!-- end banner-image -->
+            </div> <!-- end col-sm-6 -->
+            
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+      </div>
+    </section>
+    <br>
+
+    <section>
+      <div id="banner-services" data-stellar-background-ratio="0">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="banner-content animated out" data-animation="fadeInUp" data-delay="0">
+                <h3 class="banner-heading">Estadistica y Probabilidad</h3>
+                <div style="text-align: justify;" class="banner-decription">
+                  La Estadística es la ciencia y el arte de dar sentido a los datos, 
+                  proporcionando la teoría y los métodos para extraer información 
+                  de estos y poder resolver problemas del mundo real.
+                </div> <!-- end banner-decription -->
+              </div> <!-- end banner-content -->
+            </div> <!-- end col-sm-6 -->
+
+            <div class="col-sm-6">
+              <div class="banner-image animated out" data-animation="fadeInUp" data-delay="0">
+                <img style="height: 100%; width: 100%;" src="/static/img/CapformForm.png" alt="">
+              </div> <!-- end banner-image -->
+            </div> <!-- end col-sm-6 -->
+            
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+      </div>
+    </section>
+    <br>
+
+    <section>
+      <div id="banner-services" data-stellar-background-ratio="0">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="banner-content animated out" data-animation="fadeInUp" data-delay="0">
+                <h3 class="banner-heading">Pronosticos</h3>
+                <div style="text-align: justify;" class="banner-decription">
+                  Procede con una interfaz la cual deja ingresar un documento de ciertos
+                  tipografia la cual esta en las opciones del formulario, y los respectivos
+                  valores los cuales se necesitan para realizar la simulacion pertinente.
+                </div> <!-- end banner-decription -->
+              </div> <!-- end banner-content -->
+            </div> <!-- end col-sm-6 -->
+
+            <div class="col-sm-6">
+              <div class="banner-image animated out" data-animation="fadeInUp" data-delay="0">
+                <img style="height: 100%; width: 100%;" src="/static/img/CapformMontecarlo.png" alt="">
+              </div> <!-- end banner-image -->
+            </div> <!-- end col-sm-6 -->
+            
+          </div> <!-- end row -->
+        </div> <!-- end container -->
+      </div>
+    </section>
+    <br>
+
+    <div class="page-hero bg-image overlay-dark" style="background-image: url(../static/img/Panelgris.jpg);">
+      <div class="hero-section">
+          <br><br><br><br><br><br><br>
+        <div class="container text-center wow zoomIn">
+          <section>
+            <div id="banner-services" data-stellar-background-ratio="0">
+              <div class="container">
+                <div class="row">
+      
+                  <div class="col-sm-6">
+                    <div class="banner-content animated out" data-animation="fadeInUp" data-delay="0">
+                      <h3 class="banner-heading" style="color:aliceblue;"">Resultados</h3>
+                      <div style="text-align: justify; color:aliceblue;" class="banner-decription">
+                        Los reultados se muestran en una pagina aparte del formulario
+                        el cual tiene que renderizar cuando el usuario le da a Calcular en cualquiera
+                        de los formularios de la pagina.
+                      </div> <!-- end banner-decription -->
+                    </div> <!-- end banner-content -->
+                  </div> <!-- end col-sm-6 -->
+      
+                  <div class="col-sm-6">
+                    <div class="banner-image animated out" data-animation="fadeInUp" data-delay="0">
+                      <img style="height: 100%; width: 100%;" src="/static/img/resultados.png" alt="">
+                    </div> <!-- end banner-image -->
+                  </div> <!-- end col-sm-6 -->
+                  
+                </div> <!-- end row -->
+              </div> <!-- end container -->
+            </div>
+          </section>
+          <br><br><br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+{% endblock %}

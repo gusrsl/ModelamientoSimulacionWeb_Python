@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Método de los cuadrados medios</title>
+{% endblock %}
+
+{% block content %}
+<legend class="text-center header">Método de los cuadrados medios</legend><br>
+
+<div class="container">
+    <legend class="text-left header">Gráfica</legend>
+    <div class="card">
+        <center><img src="data:image/png;base64,{{ image }}"></center>
+    </div>
+</div><br>
+
+<div class="container">
+    <legend class="text-left header">Tabla de resultados</legend>
+</div><br>
+
+<div class="container">
+    {{data|safe}}
+</div>
+
+<div class="container">
+    {{data2|safe}}
+</div>
+{% endblock %}

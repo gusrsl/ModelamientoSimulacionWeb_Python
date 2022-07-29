@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Media, Mediana y Moda</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br><br><br><br><br><br><br>
+    
+    <legend class="text-center header">Media, Mediana y Moda</legend><br>
+    <div class="container">
+        {{data|safe}}
+    </div>
+    <div class="container">
+        {{data1|safe}}
+    </div>
+    <div class="container">
+        {{data2|safe}}
+    </div>
+
+    <div class="card">
+        <center><img src="data:image/png;base64,{{ image }}"></center>
+    </div>
+    </div>
+</div><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

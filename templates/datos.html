@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<title>Media, Mediana y Moda</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-hero bg-image overlay-dark" style="background-image: url(../static/img/darma.png);">
+    <div class="hero-section">
+        <br><br><br><br><br><br><br>
+      <div class="container text-center wow zoomIn">
+        <span class="subhead" style="color:aliceblue">Datos utilizados</span>
+        <h1 class="display-4" style="color:aliceblue">Casa Deportiva "Daramacio</h1>
+        <a href="/" class="btn btn-dark">Home</a>
+        <br><br><br><br><br><br><br>
+      </div>
+    </div>
+  </div>
+
+<section>
+    <br><br><br>
+<h2 class="title">Datos de Ventas Mensuales en el año 2014</h2>
+<br><br>
+
+    <div class="description">
+        Darmacio es una empresa que se dedica a la comercialización 
+        de ropa, accesorios y calzado deportivo brindando al cliente 
+        una gran gama de diseños y modelos a los mejores precios del mercado.
+    </div>
+    <br>
+    <div class="description">
+        A continuacion se pueden observar los distintos valores invetigados sobre
+        el Almacen de articulos deprotivo Daramacio, estos son los valores de
+        ventas del año 2014, especfiicado tambien la comision del peovedoor
+        el mismo tambien esta acompanado por las venta mes a mes de la empresa.
+    </div>
+    <br><br><br>
+
+    <div class="container">
+        {{data|safe}}
+    </div>
+    <div class="card">
+        <center><img src="data:image/png;base64,{{ image }}"></center>
+    </div>
+{% endblock %}
